@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction} \label{chap:intro}
+Human-Robot Interaction (\acrshort{hri}) is concerned with `understanding, designing and evaluating robotic systems for use by or with humans' \citep{goodrich2007human}. As a consequence, the field of research combines several disciplines \citep{fong2003survey}. Research directions are influenced by findings and methodologies from cognitive science, artificial intelligence, robotics, and social science (amongst many others; \citealp{baxter2016althri}). The work in this thesis approaches \acrshort{hri} from a social perspective. This perspective considers the design and impact of robots in social settings; \cite{breazeal2002designing} provides a succinct description of such machines:
+\begin{quote}
+\textit{``A sociable robot is able to communicate and interact with, understand and even relate to us, in a personal way.''}
+\end{quote}
+
+This entails that the robot should be able to understand humans (and itself) in social terms. It is this distinction of a sociable robot, the understanding of humans in social terms, that this thesis aims to contribute to, as opposed to a social robot that is purely \textit{evocative}, \textit{receptive}, or an \textit{interface} \citep{breazeal2003toward}.
+Whilst there are many technical and theoretical challenges to this approach, the rewards have great potential value. The \textit{Social Intelligence Hypothesis} (or \textit{Social Brain Hypothesis}; \citealp{dunbar2002social}) posits that the complex social world has helped to shape how human intelligence has evolved \citep{holekamp2007questioning}. Indeed, human children have similar abilities for dealing with the physical world as chimpanzees, but have superior cognitive skills for dealing with the social world \citep{herrmann2007humans}. By tapping into our \textit{social brains}, social robots seek to elicit reactions and interactions which would not be possible without social behaviour; they are \textit{socially evocative} \citep{fong2003survey}. Such robots rely on the human tendency to anthropormorphise \citep{reeves1996people}, which seems to happen without mindful thought \citep{kim2012anthropomorphism}.
+
+It could be argued that the domain of child education is inherently social \citep{bandura1977social,vygotsky1980mind}. From an early age, children use social signals to select who to learn from \citep{birch2008three,wu2010no}, and it has been suggested that social interaction is \textit{essential} for certain aspects of child learning \citep{kuhl2007speech}. However, we still have relatively little understanding of how \gls{learning} actually takes place \citep{vanlehn2003only}, and what impact combinations of multimodal social cues have on \gls{learning} in complex settings \citep{roth2002up}. The work herein seeks to explore the social behaviour that a robot can use to influence interactions. The intention is to discover how children respond to robot social behaviour in real-world environments, and how the behaviour of a robot can positively affect child behaviour as measured, in part, through \gls{learning} outcomes of such interactions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scope}\label{sec:intro-scope}
+As \acrshort{hri} lies at the intersection of many fields of research, and the application domain of child \gls{learning} is large in itself, it is necessary to more tightly define the scope of the work undertaken as part of this thesis. The following subsections seek to specify the focus of the research conducted, accompanied by justifications for any restrictions in the scope where necessary.
+
+\subsection{Social Behaviour} \label{sec:scope-social}
+The emphasis throughout the research conducted here is from the social \acrshort{hri} perspective. The aim is to provide an account for how to develop robot social behaviour for use with children in educational interactions, rather than to investigate effective teaching strategies when using robots. Child \gls{learning} and social responses provide useful metrics for evaluating the impact of robot behaviour manipulations, and the effect of varying robot social behaviour will be reflected upon using these measures throughout. As such, in the majority of experiments, the teaching strategy is consistent, whilst robot social behaviour is varied (although there is occasionally overlap between the two and it is acknowledged that the teaching strategy must be explored sufficiently to ensure that \gls{learning} is possible within the interactions).
+
+Exploration of social behaviour within the field of \acrshort{hri} is useful as it can teach us not only about how we interact with machines, but also about human psychology. The field of Human-Computer Interaction (\acrshort{hci}) has been established for a longer period than that of Human-Robot Interaction, but has many similarities (indeed \acrshort{hri} could be seen as a sub-level of \acrshort{hci} research if a robot is considered a specific type of computer, or a parallel field if not). It is suggested that \acrshort{hci} relies on understanding and modelling humans, and in particular, social aspects of human behaviour, for example: `attention', `perception', and `communication' \citep{hewett1992acm}. This reliance translates to \acrshort{hri} as well, and makes study of social behaviour in these contexts worthwhile (human development is embedded within a social context; \citealp{rogoff1990apprenticeship}), as it can further our understanding of human psychology \citep{morse2011role}. To provide a concrete example of where this has been achieved, developmental \acrshort{hri} has assisted in evaluating models of language acquisition in an interaction \citep{morse2015posture}. Study of social behaviour in \acrshort{hri} is therefore a potentially interesting and valuable direction of research in itself, which is why it forms the primary basis of exploration in this thesis.
+
+Given the application domain of child \gls{learning}, measurements of \gls{learning} are often used to form part of the evaluation of implemented robot behaviours, but the aim is not to develop optimal teaching strategies. Teaching strategies are commonly specific to particular tasks, however, social behaviour is common throughout all \gls{learning} tasks. It is an understanding of this more generalisable social behaviour that the work here aims to make a contribution to. As such, the \gls{learning} task itself can be varied between experimental scenarios depending on the requirements of the aspect(s) of social behaviour under consideration. It is however recognised that social behaviour is likely to be constrained by the specific context \citep{kennedy2013constraining}, and so the interaction context is often kept consistent, even if the educational content is not. The distinction between \acrshort{hri} research exploring social behaviour in the context of educational interactions (the approach taken here), and research aiming to develop the best teaching strategies for robots will be expanded upon in Chapter \ref{chap:background}.
+
+\subsection{Dyadic Interactions} \label{sec:scope-dyad}
+Dyadic interactions between one robot and one child will be the primary context for the work here. This decision was made for several reasons. Firstly, significant advantages have been demonstrated in terms of child \gls{learning} in one-to-one scenarios, making it a clearly relevant application domain \citep{bloom1984sigma,vanlehn2011relative}; this will be discussed further in Chapter \ref{chap:background}. Secondly, many manipulations of social behaviour rely on some form of personalisation \citep{belpaeme2012multimodal,syrdal2007personalized}. Multi-party interactions would add a layer of complexity as decisions may need to be made about who to personalise to and when, which is not a trivial task in itself \citep{leite2013managing}. Additionally, many technical challenges arise which rely on robust perception (for example, to tell which child responds to a question). This technology is not yet reliable enough for use in naturalistic environments, particularly with children \citep{belpaeme2013child}. Finally, the dynamics of the interaction are also highly likely to change when an additional child is present \citep{leite2015comparing}. This dynamic may then rely more on the relationship between the children, diminishing the role that the robot can assume, which could hinder the exploration of particular effects, or the ability to attribute any findings to the behaviour of the robot.
+
+\subsection{Child-Robot Interaction} \label{sec:scope-cri}
+Children aged 6 to 9 years old will be the target group for evaluating robot behaviours with. Children of this age present a greater opportunity to take advantage of \textit{suspension of disbelief}, where judgements of implausibility are suspended \citep{coleridge2004biographia,duffy2012suspension}. It has been shown that children will readily suspend disbelief in an interaction with a social robot, which can bring about advantages to researchers, such as children overlooking minor technical problems (e.g., slow speech response) or being more willing to treat the robot as a social character \citep{belpaeme2012multimodal,belpaeme2013child}. This decision also allows the work here to build on the expertise of the European projects (\acrshort{alize} and \acrshort{dream}) which this work is conducted alongside, as these age ranges overlap. Of course, this also requires careful managing from an ethical perspective \citep{kahn2004social,sharkey2015robot}, which will be elaborated on in Chapter \ref{chap:method}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Thesis}\label{sec:intro-thesis}
+The main thesis that this document seeks to put forward is as below.
+
+\begin{quote}
+A robot with \gls{tailored} social behaviour will positively influence the outcomes of tutoring interactions with children and consequently lead to an increase in child \gls{learning} when compared to a robot without this social behaviour.
+\end{quote}
+
+Additional research questions are also introduced here. These research questions are used to support and direct the experimental research conducted in pursuit of demonstrating the primary thesis.
+
+\begin{itemize}
+
+\item \textbf{What advantages (if any) do robots offer in terms of \gls{learning} outcomes when compared to other technological media?}
+
+A growing body of evidence suggests that the socially evocative aspect of robots (as discussed at the start of this chapter and in \citealp{fong2003survey}; further described in Section \ref{sec:background-tutor}) leads to benefits in interactions when compared to other media. However, relatively few rigorous studies have confirmed these findings in relation to a positive impact on child \gls{learning} outcomes. Whilst the main thesis is concerned with tailoring robot behaviour, the case for using a robot must first be justified.
+
+\item \textbf{How do children perceive and respond to robot social behaviour in educational interactions?}
+		
+As established in the scope for this work (Section \ref{sec:scope-cri}), children will suspend disbelief when interacting with robots, but it is unclear how they will perceive and interpret social behaviour of robotic characters, particularly in a context in which robots are not commonplace. The thesis assumes that interactions will form and that robot social behaviour will influence child behaviour; this research question aims to establish whether this is indeed the case.
+
+\item \textbf{How do the verbal and nonverbal behaviours of a social robot influence \gls{learning} outcomes?}
+
+Robots can employ social behaviours across a multitude of modalities. Section \ref{sec:scope-dyad} highlighted personalisation of social behaviour as a common means of behavioural manipulation. Such personalisation could be performed through verbal or nonverbal channels, through one or more social cues. Building up a picture of how social cues combine to influence human behaviour is of fundamental interest to not only the field of \acrshort{hri}, but also psychology (Section \ref{sec:scope-social}).
+
+\item \textbf{How can the perception of robot social behaviour be characterised?}
+
+Some form of characterisation of robot social behaviour is required in order to readily compare between different behaviours, or sets of behaviours, thus enabling a more explicit link between social behaviour characterisations and outcomes, such as \gls{learning}. Moving beyond descriptions of specific behavioural implementations, and towards how behaviours are actually perceived by humans may provide greater insight into the effects of those behaviours (Section \ref{sec:scope-social}).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Approach and Experimentation}\label{sec:intro-exps}
+The thesis and the research questions are explored in this document through a series of experimental evaluations. First, previous work is discussed with the aim of establishing what is already known in the field of \acrshort{hri}, specifically in terms of the principles of designing social behaviour for \gls{learning} interactions (mainly through Human-Human Interaction \acrshort{hhi} literature). This review of the literature also helps in designing methodologies for assessing child \gls{learning} and robot social behaviour. The literature review (Chapter \ref{chap:background}) reveals that there is no established means of characterising robot social behaviour, nor an agreed upon technique or principle by which social behaviour should be designed and implemented. This led to the formulation of the research questions above.
+
+Child perception and responses to robot social behaviour are considered throughout the experimental evaluations performed in Chapters \ref{chap:validation} through \ref{chap:verbal} (summarised in Table \ref{tab:exps}). This is done through a variety of means, including video coding of both robot and child social behaviour, child subject surveys and adult observer surveys. These methods are described in Chapter \ref{chap:method}. The advantages of robots and effects of embodiment are explored through consideration of prior literature, and furthered here through experiments that compare a physically present robot to a variety of different control conditions, including a virtual form of the same robot, and having the same material presented on screen. This research question is addressed in Chapters \ref{chap:embodiment} and \ref{chap:socasoc}.
+
+Learning outcomes of children in response to different robot social behaviours are explored experimentally throughout, with many findings presented in chapters with evaluations. These findings are all brought together and contextualised in accordance with the robot social behaviour through a common means of characterisation in Chapter \ref{chap:behavemodel}. This chapter discusses all of the findings and provides some insight into why the findings may have been found, whilst also relating the observations here to prior and contemporary literature.
+
+\afterpage{%
+	\begin{landscape}
+		\begin{table}[t]
+		\centering
+		\renewcommand{\arraystretch}{1.2} 
+		\begin{tabulary}{1.7\textwidth}{@{}llllp{10.5cm}@{}}
+		\hline
+		\textbf{Date} & \textbf{Site} & \textbf{Chapter} & \textbf{Subjects} & \textbf{Summary} \\ \hline
+		18/12/2012 & Braunton CAEN primary &  & 27 & Study for sandtray interaction style; published in \cite{kennedy2013constraining} and used to inform subsequent experiments. \\
+		12/04/2013 & Plymouth University & \ref{chap:embodiment}  & 2 & Human behaviour acquisition for use as robot model. \\
+		10/07/2013-11/07/2013 & Salisbury Road primary & \ref{chap:embodiment}  & 28 & Evidence that a physically present robot makes a difference to child behaviour in educational interactions. \\
+		08/05/2014 & Braunton CAEN primary & \ref{chap:socasoc} & 6 & Human behaviour acquisition/pilot. \\
+		17/06/2014-23/06/2014 & Okehampton primary & \ref{chap:socasoc} & 45 & Evidence that a physically present robot leads to more learning in interactions, but that care must be taken with social behaviour implementation. \\
+		01/12/2014 & Braunton CAEN primary & \ref{chap:validation} & 83 & Child data. First application of \gls{nonverbalimm} on a robot in a lecture-based interaction. Children recall more information from a robot with high \gls{nonverbalimm}. \\
+		08/12/2014 & Plymouth University/online & \ref{chap:validation} & 31 & Adult data. Children and adults perceive robots with differing levels of \gls{nonverbalimm} as intended, rating the behaviour in a similar manner. \\
+		11/05/2015-13/05/2015 & Stuart Road primary & \ref{chap:nviexperiment} & 23 & Higher robot \gls{nonverbalimm} leads to more child learning in dyadic interactions. \\
+		06/07/2015-10/07/2015 & Widey Court primary & \ref{chap:verbal} & 67 & Children can learn aspects of a second language from a robot. The \gls{verbalimm} of the robot does not lead to \gls{learning} differences. \\
+		13/07/2015 & Widey Court primary & \ref{chap:verbal} & 67 & Retention test follow-up. Children retain their \gls{learning} from the robot. \\
+		22/07/2015 & Braunton CAEN primary & \ref{chap:behavemodel} & 11 & Human primes data collection. \\
+		\textgreater31/07/2015 & Online &  & 229 & Immediacy ratings for all conditions. Used to support each experimental chapter and to produce a model of social behaviour for robots in Chapter \ref{chap:behavemodel}. \\ \hline
+		\end{tabulary}
+		\caption{Experiments conducted as part of this thesis, detailing location, chapter and findings summary. Subject numbers are post-exclusion figures.}
+		\label{tab:exps}
+		\end{table}
+	\end{landscape}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Key Concepts}\label{sec:intro-concepts}
+This section seeks to provide working definitions, or pointers to such definitions, for key concepts used throughout this thesis.
+
+\begin{itemize}
+  \item \textbf{Immediacy} - is a concept from human psychology and communication literature that was introduced in the 1960's by \citet{mehrabian1968some} and is defined as the `psychological availability' of an interaction partner. Immediacy is further introduced as being a measure that indicates ``the attitude of a communicator toward his addressee", and in a general form ``the extent to which communication behaviours enhance closeness to and nonverbal interaction with another'' \citet{mehrabian1968some}. A number of specific social behaviours are listed (touching, distance, forward lean, eye contact, and body orientation) to form part of this measure, which were later utilised by researchers that sought to create and validate measuring instruments for immediacy. Immediacy can be broken down into verbal and nonverbal aspects. An exploration of the immediacy literature can be seen in Section~\ref{sec:lit-immediacy}.
+  
+  \item \textbf{Congruency} - when used in the context of social behaviour, congruency refers to the extent to which social cues are aligned to one another. This is not just in terms of cue timing, but also the quantity of social cues being used. For example, if two social cues are both used regularly and appropriately, then they would be \textit{congruent}, whereas they would be \textit{incongruent} if one was used regularly and another not at all.
+  
+  \item \textbf{Tailored} - used in reference to the thesis of this work, `tailored' describes the intentional design of social behaviours such that they are adapted specifically for the application domain of educational interactions.
+  
+  \item \textbf{Learning} - for a full discussion of definitions of learning, please see Section~\ref{sec:background-learning}. Throughout the thesis, learning will often refer specifically to cognitive learning gains that require the application of newly acquired knowledge to a novel problem, i.e., more than mere recall of information.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contributions}\label{sec:intro-contr}
+The original contributions of this thesis in the context of the research questions are outlined below. Where appropriate, chapters and published papers in which these contributions are made will be referred to. Table \ref{tab:exps} shows the experiments conducted as part of this work, along with the chapters which they are related to.
+
+\begin{itemize}
+	\item Adaptation and development of the Child Nonverbal Immediacy Questionnaire (\acrshort{cniq}), the Robot Nonverbal Immediacy Questionnaire (\acrshort{rniq}), and the Robot Immediacy Questionnaire (\acrshort{riq}): scales for use with children for characterising verbal and nonverbal social behaviour of humans and robots (Chapters \ref{chap:method}, \ref{chap:validation}, \ref{chap:verbal}; published in \citealp{kennedy2016social}, and \citealp{kennedy2016nonverbal}).
+	\item Validation of the \acrshort{cniq} and \acrshort{rniq} with children and adults for humans and robots (Chapter \ref{chap:validation} and \citealp{kennedy2016nonverbal}).
+	\item Evidence (in addition to prior work by other researchers) for the advantage of robots on child social responses, particularly in gaze towards the robot, when compared to virtual agents (Chapter \ref{chap:embodiment} and \citealp{kennedy2015comparing}).
+	\item Evidence for the advantage of robots on \gls{learning} outcomes with findings showing that children learn more when a robot is present than when only a touchscreen is used, regardless of having the same lesson content (Chapter \ref{chap:socasoc} and \citealp{kennedy2015robot}).
+	\item Findings to show that a robot with \gls{tailored} nonverbal social behaviour leads to greater child \gls{learning} (Chapters \ref{chap:nviexperiment} and \ref{chap:behavemodel}, and \citealp{kennedy2015higher}).
+	\item In short-term interactions, verbal social behaviour of a robot does not seem to improve the \gls{learning} of children, nor the retention of this \gls{learning} (Chapter \ref{chap:verbal} and \citealp{kennedy2016social}).
+	\item A model of the relationship between robot social behaviour and child \gls{learning}. This model incorporates the quantity and congruence of social cues, where a combination of a high number of social cues with high congruency will lead to maximal possible \gls{learning} (Chapter \ref{chap:behavemodel} and \citealp{kennedy2016impact}).
+\end{itemize}
+
+The work presented in this thesis has been conducted alongside two European Union FP7 projects: \acrshort{alize} and \acrshort{dream}. The work has contributed to these projects and some of the initial code resources were developed by researchers of the \acrshort{alize} project (not by the author). Instances where this was the case will be made clear in the text throughout. Many of the findings from the work presented in this thesis were also used extensively in the successful proposal for the \acrshort{l2tor} Horizon 2020 project.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Structure}\label{sec:intro-struct}
+The structure of this thesis is outlined below to provide an overview of the content and context for each chapter. A summary of key experimental findings are included at the start of each relevant chapter for ease of reference.
+
+\begin{itemize}
+\item This chapter provided an introduction to the general field of this research (robot tutors for children), the research questions including the central \textit{thesis}, scope, and contributions of the work presented in later chapters.
+
+\item Chapter \ref{chap:background} provides a background for the research, including the motivation for the scenario and application to \acrshort{hri}. Various work from the literature considering robot tutors, social behaviour, and \gls{learning} is discussed, identifying gaps in knowledge which this thesis aims to address.
+
+\item Chapter \ref{chap:method} describes the hardware tools used to conduct the research, and the development of measurement instruments based on \textit{\gls{immediacy}} for characterising social behaviour. These resources are used throughout the experimental studies presented in subsequent chapters. The procedure used to gather \gls{immediacy} ratings from adults for all of the experimental conditions used throughout the various studies is also described.
+
+\item Chapter \ref{chap:validation} presents an experiment conducted to validate the use of a modified \gls{nonverbalimm} questionnaire for use with children and adults, for observing humans and robots. This allows a stronger connection between the \gls{immediacy} literature which is mainly concerned with adults, and the scenario with robots and children used here.
+
+\item Chapter \ref{chap:embodiment} presents the findings of an experiment in which children are guided through a two-category sorting task by either a virtual, or real (physical) robot. Significant \gls{learning} differences are not found, but there is evidence to suggest that children respond differently in their social behaviour depending on which of the robots they see.
+
+\item Chapter \ref{chap:socasoc} examines the impact of multimodal social behaviour and personalisation on child \gls{learning} through the use of two different `sociality' conditions that are based on human tutor behaviour. Two further conditions which omit the use of a robot and lessons about the \gls{learning} material are used to validate the study and to draw comparisons with other claims from the literature.
+
+\item Chapter \ref{chap:nviexperiment} extends the experiment conducted in Chapter \ref{chap:socasoc} by using the same methodology, but basing behavioural manipulations explicitly on aspects of behaviour measured through the \gls{nonverbalimm} scale. It is found that a robot with higher \gls{nonverbalimm} leads to significantly improved child \gls{learning}.
+
+\item Chapter \ref{chap:verbal} continues the experimental exploration of the impact of social behaviour on \gls{learning} by comparing two different robot conditions in a language learning task. The verbal content of the robot's speech is varied to produce high and low \gls{verbalimm} conditions. It is found that the manipulations did not significantly affect the \gls{learning} of the children.
+
+\item Chapter \ref{chap:behavemodel} describes an additional experiment to collect data and brings together findings on the impact of multimodal robot social cues on child learning into one framework provided by \gls{nonverbalimm}.
+
+\item Chapter \ref{chap:maindisc} draws on the experimental work from previous chapters, alongside the context supplied by related work, to form a discussion about the broader context and findings of the thesis. Limitations of the work conducted here are outlined, leading to suggestions for future directions of research.
+
+\item Chapter \ref{chap:conclusion} concludes the thesis with a summary of the main contributions.
+
+\end{itemize}
